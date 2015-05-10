@@ -53,7 +53,7 @@ public class Connexion {
 	public static ArrayList<String> ligue() throws SQLException {	
 		ArrayList<String> listeLigue = new ArrayList<>();
 		Statement statement = conn.createStatement();
-		ResultSet tableLigue = statement.executeQuery("SELECT ligue,prenom,nom,utilisateur.idLigue FROM ligue,utilisateur WHERE utilisateur.idUtilisateur = ligue.idAdmin;");
+		ResultSet tableLigue = statement.executeQuery("SELECT ligue,prenom,nom,ligue.idLigue FROM ligue,utilisateur WHERE utilisateur.idUtilisateur = ligue.idAdmin;");
 			
 		//Récupération des valeurs 
 		while (tableLigue.next()) {
