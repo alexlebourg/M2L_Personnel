@@ -139,7 +139,7 @@ public class Connexion {
 			statut = statement.executeUpdate("UPDATE utilisateur SET prenom='" + prenom + "' WHERE idUtilisateur=" + id + ";");
 	}
 		
-	// Requête modifiant l'admin
+	// Modification d'une ligue
 	public static void modificationLigue(String ligue, String adminOld, String adminNew, String id) throws SQLException {
 		Statement statement = conn.createStatement();
 		ResultSet tableLigue = statement.executeQuery("SELECT ligue FROM ligue WHERE idLigue=" + id + ";");
